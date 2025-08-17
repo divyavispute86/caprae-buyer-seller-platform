@@ -11,7 +11,7 @@ export default function Home() {
         <Link className="btn btn-outline" to="/onboarding/buyer">I’m a Buyer</Link>
       </div>
       <hr className="sep" />
-      <p>After onboarding, visit the <a href='/buyers'>Buyer Feed</a> to accept/reject, then use the <a href='/match'>Match Workflow</a> to progress a deal.</p>
+      <p>After onboarding, visit the <Link to='/buyers'>Buyer Feed</Link> to accept/reject, then use the <Link to='/match'>Match Workflow</Link> to progress a deal.</p>
     </div>
   );
 }
