@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatCurrency } from '../utilities/helpers';
+import { formatCurrency } from '../utils/helpers';
 
 interface ProductCardProps {
   name: string;

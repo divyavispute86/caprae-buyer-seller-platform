@@ -1,7 +1,7 @@
 :root {
   --bg: #f6f7fb;
   --fg: #0f172a;
-  --muted: #64748b;
+  --muted: #b9bfc6;
   --brand: #6c5ce7;
   --brand-600: #5a48e0;
   --green: #22c55e;
@@ -38,7 +38,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(2,8,20,.04);
-  padding: 16px;
+  padding: 50px;
 }
 .row { display: flex; gap: 16px; flex-wrap: wrap; }
 .col { flex: 1 1 300px; }
@@ -54,13 +54,14 @@ body {
   padding: 10px 14px;
   cursor: pointer;
   font-weight: 600;
+  text-decoration: none;
   transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
 }
 .btn:active { transform: translateY(1px); }
 
 .btn-primary { background: var(--brand); color: white; }
 .btn-primary:hover { background: var(--brand-600); }
-.btn-outline { background: white; color: var(--fg); border-color: var(--border); }
+.btn-outline { background: white; color: var(--brand); border-color: var(--brand); }
 .btn-accept { background: var(--green); color: white; }
 .btn-reject { background: var(--red); color: white; }
 
@@ -93,7 +94,7 @@ body {
   border-radius: 6px;
   font-size: 12px;
 }
-hr.sep { border: 0; height: 1px; background: var(--border); margin: 18px 0; }
+hr.sep { border: 0; height: 1px; background: var(--border); margin: 30px 0; }
 
 /* Header/Footer specifics */
 .header {
@@ -109,20 +110,48 @@ hr.sep { border: 0; height: 1px; background: var(--border); margin: 18px 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* a {
+    text-decoration: none;
+    color: var(--brand);
+    font-weight: 600;
+  } */
 }
-.logo {
-  height: 40px; /* Adjust logo height */
-  width: auto; /* Keep aspect ratio */
-  display: block;
+
+.logo-link:hover {
+  box-shadow: 0 0 20px rgba(230, 235, 235, 0.5);
 }
 
 .header-inner img {
   display: block;
-  max-height: 40px;
+  max-height: 75px;
   width: auto;
 }
 
-.nav { display: flex; gap: 14px; }
+.nav {
+  display: flex;              
+  justify-content: flex-start;  
+  gap: 20px;                    
+  padding: 10px 20px;          
+}
+
+.nav a {
+  text-decoration: none;       
+  color: #333;                 
+  font-weight: 600;
+  padding: 5px 0;               
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--brand);              
+}
+
+.nav a.active {
+  color:  var(--brand);             
+  font-weight: 700;            
+  border-bottom: 2px solid  var(--brand);
+}
+
 .footer {
   margin-top: auto;
   border-top: 1px solid var(--border);
@@ -133,4 +162,6 @@ hr.sep { border: 0; height: 1px; background: var(--border); margin: 18px 0; }
   margin: 0 auto;
   padding: 16px;
   color: var(--muted);
+  text-align: center;
+  font-size: 14px;
 }

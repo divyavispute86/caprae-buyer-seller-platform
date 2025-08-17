@@ -5,13 +5,13 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        <Link to="/" className="flex items-center space-x-2" style={{ fontWeight: 800, fontSize: 18 }}>
+        <Link to="/" className="flex items-center space-x-2 logo-link" style={{ fontWeight: 800, fontSize: 18, }}>
           <img
             src="/logo.png"
             alt="TradeLink Logo"
             className="h-8 w-auto"
           />
-          <span>TradeLink</span>
+          {/* <span>TradeLink</span> */}
         </Link>
         <nav className="nav">
           <NavLink to="/onboarding/buyer">Buyer Onboarding</NavLink>
